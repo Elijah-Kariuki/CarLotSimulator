@@ -46,17 +46,20 @@ namespace CarLotSimulator
             jeep.MakeEngineNoise();
             jeep.MakeHonkNoise();
             //*************BONUS X 2*************//
-            
+
             //Create a CarLot class
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
 
+            
             foreach(var vehicle in showRoom.InventoryList)
             {
                 Console.WriteLine("--------------------");
                 Console.WriteLine($"Year: {vehicle.Year}, Make: {vehicle.Make}, Model: {vehicle.Model}. Car engine sounds like/is {vehicle.EngineNoise}. The horn sounds like/is {vehicle.HonkNoise}.\n Is the vehicle driverable?  {vehicle.IsDriveable}");
             }
+            Console.WriteLine("__________________");
+            Console.WriteLine($"The number of cars in the Car Lot is {CarLot.numbersOfCars}");
         }
     }
 }
